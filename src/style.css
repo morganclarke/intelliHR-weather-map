@@ -42,6 +42,10 @@ a {
   background-color: transparent;
 }
 
+li {
+  text-transform: capitalize;
+}
+
 .Weather .logo {
   max-width: 150px;
   display: block;

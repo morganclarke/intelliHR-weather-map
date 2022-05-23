@@ -14,6 +14,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>intelliHR Weather Map</title>
   </head>
@@ -50,13 +51,15 @@
             <div class="WeatherInfo">
               <div class="row">
                 <div class="col-6">
-                  <h1>New York</h1>
+                  <h1 id="city">New York</h1>
                   <ul>
-                    <li><span>Sunday 14:30</span>, clear sky</li>
                     <li>
-                      Humidity:<strong>45%</strong>, Wind:<strong
-                        >5.14km/h</strong
-                      >
+                      Sunday 14:30, <span id="description">clear sky</span>
+                    </li>
+                    <li>
+                      Humidity:
+                      <strong><span id="humidity">45</span>%</strong>
+                      Wind: <strong><span id="wind"></span> km/h</strong>
                     </li>
                   </ul>
                 </div>
@@ -64,7 +67,7 @@
                   <div class="temperature-container d-flex justify-content-end">
                     <canvas width="52" height="52"></canvas>
                     <div>
-                      <span class="temperature">32</span>
+                      <span class="temperature" id="temperature">32</span>
                       <span class="unit">°C</span>
                     </div>
                   </div>
