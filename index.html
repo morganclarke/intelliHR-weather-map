@@ -15,12 +15,75 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
-    <title>intelliHR</title>
+    <title>intelliHR Weather Map</title>
   </head>
   <body>
     <div class="container">
-      <h1>Hello World</h1>
-      <a href="" class="btn btn-primary">Click Me</a>
+      <div class="Weather">
+        <a
+          href="https://intellihr.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="img/logo_text.png" class="logo" alt="intelliHR Logo"
+        /></a>
+        <form>
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter a city..."
+                class="form-control search-input"
+              />
+            </div>
+            <div class="col-3 p-0">
+              <input
+                type="submit"
+                class="btn btn-primary w-100"
+                value="Search"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="WeatherInfo">
+          <div class="row">
+            <div class="col-6">
+              <h1>New York</h1>
+              <ul>
+                <li><span>Sunday 14:30</span>, clear sky</li>
+                <li>
+                  Humidity:<strong>45%</strong>, Wind:<strong>5.14km/h</strong>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <div class="temperature-container d-flex justify-content-end">
+                <canvas width="52" height="52"></canvas>
+                <div>
+                  <span class="temperature">32</span>
+                  <span class="unit">°C</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          This project was coded by Morgan Clarke and is
+          <a
+            href="https://github.com/morganclarke/intelliHR-weather-map"
+            target="_blank"
+            rel="noopener noreferrer"
+            >open-sourced on Gitbhub</a
+          >
+          and
+          <a
+            href="https://idyllic-dolphin-a82de0.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >hosted on Netlify</a
+          >
+        </footer>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
